@@ -1165,6 +1165,259 @@ footer {
     min-width: 800px;
   }
 
+/* =====================================================
+   FEATURE SECTION LAYOUT FIX
+   Keeps every feature inside its own section
+===================================================== */
+
+.feature {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+
+  gap: clamp(40px, 6vw, 100px);
+
+  align-items: center;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* Text column */
+
+.feature-copy {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Product/mockup column */
+
+.feature-ui {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Alternating sections */
+
+.feature.reverse {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+
+
+/* Keep reversed feature order correct */
+
+.feature.reverse .feature-ui {
+  order: 1;
+}
+
+.feature.reverse .feature-copy {
+  order: 2;
+}
+
+
+/* =====================================================
+   MISTAKE BOOK
+===================================================== */
+
+.mistake-ui {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   CHECKLIST
+===================================================== */
+
+.checklist-ui {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* IMPORTANT:
+   Do not allow the table itself to stretch
+   the entire feature section.
+*/
+
+.checklist-table-wrap {
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+}
+
+.checklist-table {
+  width: 100%;
+
+  /* Removed the old 900px minimum */
+  min-width: 0;
+
+  table-layout: fixed;
+}
+
+
+/* Make checklist columns compact */
+
+.checklist-table th,
+.checklist-table td {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+
+/* First column gets more room */
+
+.checklist-table th:first-child {
+  width: 20%;
+}
+
+
+/* Remaining columns */
+
+.checklist-table th:not(:first-child) {
+  width: auto;
+}
+
+
+/* =====================================================
+   PREVENT ANY FEATURE FROM CREATING PAGE-WIDE SCROLL
+===================================================== */
+
+.feature img,
+.feature-ui,
+.mistake-ui,
+.checklist-ui,
+.checklist-table-wrap {
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   DESKTOP / IPAD LANDSCAPE
+===================================================== */
+
+@media (min-width: 901px) {
+
+  .feature {
+    min-height: 560px;
+  }
+
+  .feature-copy {
+    align-self: center;
+  }
+
+  .feature-ui {
+    align-self: center;
+  }
+
+  .checklist-ui {
+    transform: scale(0.92);
+    transform-origin: center;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .feature,
+  .feature.reverse {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 35px;
+
+    min-height: auto;
+
+    overflow: hidden;
+  }
+
+  .feature-copy,
+  .feature.reverse .feature-copy {
+    order: 1;
+  }
+
+  .feature-ui,
+  .feature.reverse .feature-ui {
+    order: 2;
+  }
+
+  .mistake-ui,
+  .checklist-ui {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .feature,
+  .feature.reverse {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .feature-copy {
+    width: 100%;
+  }
+
+  .feature-ui {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .checklist-ui {
+    transform: none;
+  }
+
+  .checklist-table {
+    min-width: 700px;
+  }
+
+  .checklist-table-wrap {
+    overflow-x: auto;
+  }
+
 }
 
 </style>
