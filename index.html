@@ -793,7 +793,380 @@ footer {
   .footer-links {
     flex-wrap: wrap;
   }
+/* ================================
+   NEETFLOW MISTAKE BOOK
+================================ */
+
+.mistake-ui {
+  padding: 0;
+  overflow: hidden;
+  background: #fbf9fd;
+  border: 1px solid #d9d1e3;
+  box-shadow: 0 20px 45px rgba(55, 35, 83, .12);
 }
+
+.mistake-top {
+  height: 72px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fcfaff;
+  border-bottom: 1px solid #ddd6e6;
+}
+
+.mistake-logo {
+  color: #4b087e;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.mistake-subtitle {
+  margin-top: 3px;
+  color: #716b78;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.mistake-icon {
+  width: 22px;
+  height: 24px;
+  border: 2px solid #4b087e;
+  border-radius: 4px;
+  color: #4b087e;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.mistake-body {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  min-height: 410px;
+}
+
+.mistake-sidebar {
+  background: #f5effa;
+  border-right: 1px solid #ddd6e6;
+  padding: 24px 16px;
+}
+
+.mistake-sidebar-title {
+  color: #6e6876;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+
+.subject {
+  padding: 11px 10px;
+  margin-bottom: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.subject.physics {
+  color: #4084e8;
+}
+
+.subject.chemistry {
+  color: #f06464;
+}
+
+.subject.active {
+  color: #4b087e;
+  background: #eadcff;
+}
+
+.mistake-content {
+  padding: 30px;
+  min-width: 0;
+}
+
+.mistake-search {
+  height: 47px;
+  border: 1px solid #ddd6e6;
+  background: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  color: #77717e;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.search-icon {
+  font-size: 24px;
+  line-height: 0;
+  color: #68616f;
+  transform: rotate(-20deg);
+}
+
+.mistake-items {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.mistake-item {
+  min-height: 58px;
+  background: white;
+  border: 1px solid #ddd6e6;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+}
+
+.mistake-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 3px;
+  background: #eadcff;
+  color: #4b087e;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.mistake-chapter {
+  font-size: 12px;
+  font-weight: 700;
+  color: #211b2d;
+  line-height: 1.25;
+}
+
+.mistake-count {
+  color: #4b087e;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+
+/* Mistake Book responsive */
+
+@media(max-width: 700px) {
+
+  .mistake-body {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .mistake-sidebar {
+    padding: 18px 8px;
+  }
+
+  .mistake-sidebar-title {
+    font-size: 8px;
+  }
+
+  .subject {
+    font-size: 8px;
+    padding: 9px 6px;
+  }
+
+  .mistake-content {
+    padding: 16px;
+  }
+
+  .mistake-item {
+    grid-template-columns: 32px 1fr auto;
+    padding: 0 10px;
+  }
+
+  .mistake-chapter {
+    font-size: 9px;
+  }
+
+  .mistake-count {
+    font-size: 8px;
+  }
+
+  .mistake-number {
+    width: 27px;
+    height: 27px;
+    font-size: 8px;
+  }
+
+/* ================================
+   NEETFLOW CHECKLIST
+================================ */
+
+.checklist-ui {
+  padding: 0;
+  overflow: hidden;
+  background: #fbf9fd;
+  border: 1px solid #29222f;
+  box-shadow: 10px 10px 0 #39313f,
+              0 25px 45px rgba(55, 35, 83, .12);
+}
+
+.checklist-header {
+  height: 72px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fcfaff;
+  border-bottom: 1px solid #dcd5e5;
+}
+
+.checklist-logo {
+  color: #4b087e;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.checklist-subtitle {
+  margin-top: 3px;
+  color: #716b78;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.completion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b087e;
+  font-size: 10px;
+}
+
+.completion-box {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #4b087e;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.checklist-table-wrap {
+  overflow-x: auto;
+}
+
+.checklist-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 9px;
+}
+
+.checklist-table th {
+  background: #eadcff;
+  color: #4b087e;
+  height: 47px;
+  padding: 7px 5px;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1.15;
+  border-right: 1px solid #d7cce2;
+  text-align: center;
+}
+
+.checklist-table th:first-child {
+  width: 235px;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.checklist-table th:last-child {
+  width: 105px;
+}
+
+.checklist-table td {
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  border-right: 1px solid #ddd6e6;
+  border-bottom: 1px solid #ddd6e6;
+  color: #27212e;
+}
+
+.checklist-table td:first-child {
+  text-align: left;
+  padding-left: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.checklist-table td:first-child span {
+  color: #4b087e;
+  margin-right: 10px;
+  font-size: 9px;
+}
+
+.checklist-table td b {
+  width: 19px;
+  height: 19px;
+  margin: auto;
+  border-radius: 3px;
+  background: #4b087e;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+
+.checklist-table td:not(:first-child):not(.revision) {
+  position: relative;
+}
+
+.checklist-table td:not(:first-child):not(.revision):empty::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  border: 1px solid #d8d1df;
+  border-radius: 3px;
+  background: #fbfaff;
+}
+
+.checklist-table .revision {
+  color: #4b087e;
+  font-weight: 800;
+}
+
+
+/* Checklist responsive */
+
+@media(max-width: 700px) {
+
+  .checklist-ui {
+    box-shadow: 5px 5px 0 #39313f,
+                0 18px 35px rgba(55, 35, 83, .12);
+  }
+
+  .checklist-header {
+    padding: 0 15px;
+  }
+
+  .checklist-logo {
+    font-size: 19px;
+  }
+
+  .checklist-table {
+    min-width: 800px;
+  }
+
+}
+
 </style>
 </head>
 <body>
@@ -1051,138 +1424,435 @@ footer {
         </div>
       </div>
     </div>
-    <!-- MISTAKE BOOK -->
-    <div class="feature reverse reveal">
-      <div class="feature-copy">
-        <div class="feature-number">
-          02 — MISTAKE BOOK
-        </div>
-        <h3>
-          Once is a mistake.
-          Twice is a habit.
-        </h3>
-        <p>
-          Record what went wrong, understand why it happened,
-          revisit it during revision and identify the mistakes
-          that keep coming back.
-        </p>
-      </div>
-      <div class="feature-ui">
-        <div style="display:flex;justify-content:space-between;">
-          <strong>Mistake Book</strong>
-          <span style="font-size:10px;color:#777;">
-            47 mistakes
-          </span>
-        </div>
-        <div class="mistake-list">
-          <div class="mistake">
-            <div>
-              <strong>Forgot sign convention</strong>
-              <small>Physics · Electrostatics</small>
-            </div>
-            <span class="tag">Concept</span>
-          </div>
-          <div class="mistake">
-            <div>
-              <strong>Misread the question</strong>
-              <small>Chemistry · Equilibrium</small>
-            </div>
-            <span class="tag">Silly error</span>
-          </div>
-          <div class="mistake">
-            <div>
-              <strong>Confused two similar terms</strong>
-              <small>Biology · Genetics</small>
-            </div>
-            <span class="tag">Memory</span>
-          </div>
-          <div class="mistake">
-            <div>
-              <strong>Calculation error</strong>
-              <small>Physics · Current Electricity</small>
-            </div>
-            <span class="tag">Accuracy</span>
-          </div>
-        </div>
-      </div>
+  <!-- MISTAKE BOOK -->
+
+<div class="feature reverse reveal">
+
+  <div class="feature-copy">
+
+    <div class="feature-number">
+      MISTAKE BOOK
     </div>
-    <!-- CHECKLIST -->
-    <div class="feature reveal">
-      <div class="feature-copy">
-        <div class="feature-number">
-          03 — CHECKLIST
+
+    <h3>
+      Once is a mistake.<br>
+      Twice is a habit.
+    </h3>
+
+    <p>
+      Turn every mistake into a learning opportunity.
+      Record what went wrong, understand why, and revisit
+      it during revision. Spot recurring weak areas and
+      make sure the same mistakes don't hold you back again.
+    </p>
+
+  </div>
+
+
+  <div class="feature-ui mistake-ui">
+
+    <!-- TOP BAR -->
+
+    <div class="mistake-top">
+
+      <div>
+        <div class="mistake-logo">
+          NEETFlow
         </div>
-        <h3>
-          Clear your list.
-          Clear your mind.
-        </h3>
-        <p>
-          Break every chapter into the actual work that needs
-          to be done — lectures, notes, modules, NCERT, PYQs
-          and revisions — so nothing quietly slips through.
-        </p>
-      </div>
-      <div class="feature-ui">
-        <strong>Biology · Human Physiology</strong>
-        <div class="check-row">
-          <div class="check-top">
-            <strong>Breathing & Exchange</strong>
-            <span>83%</span>
-          </div>
-          <div class="checks">
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-          </div>
-        </div>
-        <div class="check-row">
-          <div class="check-top">
-            <strong>Body Fluids</strong>
-            <span>66%</span>
-          </div>
-          <div class="checks">
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check"
-                 style="background:#f4eff8;color:#aaa;">
-              —
-            </div>
-          </div>
-        </div>
-        <div class="check-row">
-          <div class="check-top">
-            <strong>Excretory Products</strong>
-            <span>42%</span>
-          </div>
-          <div class="checks">
-            <div class="check">✓</div>
-            <div class="check">✓</div>
-            <div class="check"
-                 style="background:#f4eff8;color:#aaa;">
-              —
-            </div>
-            <div class="check"
-                 style="background:#f4eff8;color:#aaa;">
-              —
-            </div>
-            <div class="check"
-                 style="background:#f4eff8;color:#aaa;">
-              —
-            </div>
-            <div class="check"
-                 style="background:#f4eff8;color:#aaa;">
-              —
-            </div>
-          </div>
+
+        <div class="mistake-subtitle">
+          MISTAKE BOOK
         </div>
       </div>
+
+      <div class="mistake-icon">
+        !
+      </div>
+
     </div>
+
+
+    <!-- BODY -->
+
+    <div class="mistake-body">
+
+      <!-- SUBJECT SIDEBAR -->
+
+      <div class="mistake-sidebar">
+
+        <div class="mistake-sidebar-title">
+          SUBJECTS
+        </div>
+
+        <div class="subject physics">
+          PHYSICS
+        </div>
+
+        <div class="subject chemistry">
+          CHEMISTRY
+        </div>
+
+        <div class="subject active">
+          BIOLOGY
+        </div>
+
+      </div>
+
+
+      <!-- MISTAKE LIST -->
+
+      <div class="mistake-content">
+
+        <div class="mistake-search">
+          <span class="search-icon">⌕</span>
+          <span>Search Biology mistakes</span>
+        </div>
+
+
+        <div class="mistake-items">
+
+          <div class="mistake-item">
+
+            <div class="mistake-number">
+              01
+            </div>
+
+            <div class="mistake-chapter">
+              Animal Kingdom
+            </div>
+
+            <div class="mistake-count">
+              15 Q.
+            </div>
+
+          </div>
+
+
+          <div class="mistake-item">
+
+            <div class="mistake-number">
+              02
+            </div>
+
+            <div class="mistake-chapter">
+              Breathing
+            </div>
+
+            <div class="mistake-count">
+              27 Q.
+            </div>
+
+          </div>
+
+
+          <div class="mistake-item">
+
+            <div class="mistake-number">
+              03
+            </div>
+
+            <div class="mistake-chapter">
+              Principles of Inheritance and Variation
+            </div>
+
+            <div class="mistake-count">
+              38 Q.
+            </div>
+
+          </div>
+
+
+          <div class="mistake-item">
+
+            <div class="mistake-number">
+              04
+            </div>
+
+            <div class="mistake-chapter">
+              Human Reproduction
+            </div>
+
+            <div class="mistake-count">
+              22 Q.
+            </div>
+
+          </div>
+
+
+          <div class="mistake-item">
+
+            <div class="mistake-number">
+              05
+            </div>
+
+            <div class="mistake-chapter">
+              Biotechnology
+            </div>
+
+            <div class="mistake-count">
+              31 Q.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</<!-- CHECKLIST -->
+
+<div class="feature reveal">
+
+  <div class="feature-copy">
+
+    <div class="feature-number">
+      CHECKLIST
+    </div>
+
+    <h3>
+      Clear your list.<br>
+      Clear your mind.
+    </h3>
+
+    <p>
+      Break your preparation into small, actionable tasks
+      and keep everything you need to get done in one place.
+      From a quick revision to a full chapter, know exactly
+      what is complete and what still needs your attention.
+    </p>
+
+  </div>
+
+
+  <div class="feature-ui checklist-ui">
+
+    <!-- CHECKLIST HEADER -->
+
+    <div class="checklist-header">
+
+      <div>
+
+        <div class="checklist-logo">
+          NEETFlow
+        </div>
+
+        <div class="checklist-subtitle">
+          PHYSICS CHECKLIST
+        </div>
+
+      </div>
+
+
+      <div class="completion">
+
+        <span class="completion-box">✓</span>
+
+        <strong>68% COMPLETE</strong>
+
+      </div>
+
+    </div>
+
+
+    <!-- TABLE -->
+
+    <div class="checklist-table-wrap">
+
+      <table class="checklist-table">
+
+        <thead>
+
+          <tr>
+
+            <th>Physics Chapter</th>
+            <th>Lecture</th>
+            <th>Read Notes</th>
+            <th>Read Module</th>
+            <th>Read NCERT</th>
+            <th>Module Questions</th>
+            <th>DC Pandey</th>
+            <th>JEE Main PYQ</th>
+            <th>No. of Revisions</th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+          <tr>
+
+            <td><span>01</span> Units &amp; Measurements</td>
+
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td class="revision">4</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>02</span> Motion in a Straight Line</td>
+
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td class="revision">4</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>03</span> Motion in a Plane</td>
+
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td class="revision">4</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>04</span> Laws of Motion</td>
+
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td class="revision">4</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>05</span> Work, Energy &amp; Power</td>
+
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td class="revision">4</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>06</span> System of Particles</td>
+
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td class="revision">4</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>07</span> Gravitation</td>
+
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td class="revision">3</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>08</span> Properties of Bulk Matter</td>
+
+            <td><b>✓</b></td>
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td class="revision">3</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>09</span> Thermodynamics</td>
+
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td class="revision">3</td>
+
+          </tr>
+
+
+          <tr>
+
+            <td><span>10</span> Kinetic Theory</td>
+
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td></td>
+            <td></td>
+            <td><b>✓</b></td>
+            <td><b>✓</b></td>
+            <td class="revision">3</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
     <!-- TIMETABLE -->
     <div class="feature reverse reveal">
       <div class="feature-copy">
