@@ -1418,6 +1418,454 @@ footer {
     overflow-x: auto;
   }
 
+/* =========================================================
+   FINAL DESKTOP + IPAD LANDSCAPE FIX
+   ========================================================= */
+
+/* Keep every feature as its own complete horizontal section */
+.feature,
+.feature.reverse {
+  position: relative !important;
+
+  width: 100% !important;
+  max-width: 1400px !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+
+  align-items: center !important;
+
+  gap: 70px !important;
+
+  box-sizing: border-box !important;
+
+  /* Prevent the mockup from pushing the next section */
+  overflow: hidden !important;
+}
+
+
+/* Normal feature:
+   TEXT LEFT — UI RIGHT
+*/
+.feature:not(.reverse) .feature-copy {
+  order: 1 !important;
+}
+
+.feature:not(.reverse) .feature-ui {
+  order: 2 !important;
+}
+
+
+/* Reversed feature:
+   UI LEFT — TEXT RIGHT
+*/
+.feature.reverse .feature-ui {
+  order: 1 !important;
+}
+
+.feature.reverse .feature-copy {
+  order: 2 !important;
+}
+
+
+/* Don't allow either column to force the section wider */
+.feature-copy,
+.feature-ui {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   CHECKLIST — SMALLER + PURPLE/LAVENDER
+   ========================================================= */
+
+.checklist-ui {
+  width: 100% !important;
+  max-width: 720px !important;
+
+  margin: 0 auto !important;
+
+  background: #fbf9fd !important;
+
+  border: 2px solid #2d2635 !important;
+
+  border-radius: 4px !important;
+
+  overflow: hidden !important;
+
+  box-shadow:
+    9px 9px 0 #403747,
+    0 20px 40px rgba(75, 46, 131, 0.12) !important;
+}
+
+
+/* Checklist top section */
+
+.checklist-header {
+  background: #fcfaff !important;
+
+  border-bottom: 1px solid #ddd4e8 !important;
+
+  color: #4b2e83 !important;
+}
+
+
+/* NEETFlow */
+
+.checklist-logo {
+  color: #4b087e !important;
+}
+
+
+/* PHYSICS CHECKLIST */
+
+.checklist-subtitle {
+  color: #6e6577 !important;
+}
+
+
+/* 68% COMPLETE */
+
+.completion,
+.completion strong {
+  color: #4b087e !important;
+}
+
+.completion-box {
+  border-color: #4b087e !important;
+  color: #4b087e !important;
+  background: #f4ecfc !important;
+}
+
+
+/* Checklist table */
+
+.checklist-table-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  overflow-x: hidden !important;
+}
+
+
+.checklist-table {
+  width: 100% !important;
+  min-width: 0 !important;
+
+  background: #fbf9fd !important;
+
+  color: #29222f !important;
+}
+
+
+/* Purple header row */
+
+.checklist-table th {
+  background: #eadcff !important;
+  color: #4b087e !important;
+
+  border-color: #d7cbe5 !important;
+}
+
+
+/* Table cells */
+
+.checklist-table td {
+  background: #fbf9fd !important;
+  color: #29222f !important;
+
+  border-color: #ddd6e6 !important;
+}
+
+
+/* Chapter numbers */
+
+.checklist-table td:first-child span {
+  color: #4b087e !important;
+}
+
+
+/* Purple completed boxes */
+
+.checklist-table td b {
+  background: #4b087e !important;
+  color: #ffffff !important;
+
+  border-radius: 3px !important;
+}
+
+
+/* Empty boxes */
+
+.checklist-table td:not(:first-child):not(.revision):empty::after {
+  border-color: #d8d0df !important;
+  background: #ffffff !important;
+}
+
+
+/* Revision number */
+
+.checklist-table .revision {
+  color: #4b087e !important;
+}
+
+
+/* =========================================================
+   MISTAKE BOOK — PURPLE/LAVENDER
+   ========================================================= */
+
+.mistake-ui {
+  width: 100% !important;
+  max-width: 720px !important;
+
+  margin: 0 auto !important;
+
+  background: #fbf9fd !important;
+
+  border: 2px solid #2d2635 !important;
+
+  border-radius: 4px !important;
+
+  overflow: hidden !important;
+
+  box-shadow:
+    9px 9px 0 #403747,
+    0 20px 40px rgba(75, 46, 131, 0.12) !important;
+}
+
+
+/* Mistake Book header */
+
+.mistake-top {
+  background: #fcfaff !important;
+
+  border-bottom: 1px solid #ddd4e8 !important;
+}
+
+
+/* NEETFlow */
+
+.mistake-logo {
+  color: #4b087e !important;
+}
+
+
+/* MISTAKE BOOK */
+
+.mistake-subtitle {
+  color: #6e6577 !important;
+}
+
+
+/* Top-right icon */
+
+.mistake-icon {
+  border-color: #4b087e !important;
+  color: #4b087e !important;
+  background: #f4ecfc !important;
+}
+
+
+/* Mistake Book body */
+
+.mistake-body {
+  background: #fbf9fd !important;
+}
+
+
+/* Sidebar */
+
+.mistake-sidebar {
+  background: #f3ebfa !important;
+
+  border-right: 1px solid #ddd4e8 !important;
+}
+
+
+/* SUBJECTS */
+
+.mistake-sidebar-title {
+  color: #6e6577 !important;
+}
+
+
+/* Physics */
+
+.subject.physics {
+  color: #4387e8 !important;
+}
+
+
+/* Chemistry */
+
+.subject.chemistry {
+  color: #ed6b62 !important;
+}
+
+
+/* Biology selected */
+
+.subject.active {
+  color: #4b087e !important;
+
+  background: #e5d5f8 !important;
+}
+
+
+/* Search */
+
+.mistake-search {
+  background: #ffffff !important;
+
+  border-color: #ddd4e8 !important;
+
+  color: #77717e !important;
+}
+
+
+/* Search icon */
+
+.search-icon {
+  color: #5d5665 !important;
+}
+
+
+/* Mistake cards */
+
+.mistake-item {
+  background: #ffffff !important;
+
+  border-color: #ddd4e8 !important;
+}
+
+
+/* Number squares */
+
+.mistake-number {
+  background: #eadcff !important;
+
+  color: #4b087e !important;
+}
+
+
+/* Chapter names */
+
+.mistake-chapter {
+  color: #29222f !important;
+}
+
+
+/* Question counts */
+
+.mistake-count {
+  color: #4b087e !important;
+}
+
+
+/* =========================================================
+   IPAD LANDSCAPE / DESKTOP
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  .feature,
+  .feature.reverse {
+    grid-template-columns:
+      minmax(0, 0.95fr)
+      minmax(0, 1.05fr) !important;
+
+    gap: 60px !important;
+
+    min-height: 560px !important;
+
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+
+  .checklist-ui,
+  .mistake-ui {
+    max-width: 720px !important;
+  }
+
+
+  /* Keep the checklist compact */
+  .checklist-ui {
+    transform: scale(0.88) !important;
+    transform-origin: center center !important;
+  }
+
+
+  /* Mistake Book slightly smaller */
+  .mistake-ui {
+    transform: scale(0.92) !important;
+    transform-origin: center center !important;
+  }
+
+}
+
+
+/* =========================================================
+   VERY WIDE SCREENS
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+  .feature,
+  .feature.reverse {
+    gap: 80px !important;
+  }
+
+}
+
+
+/* =========================================================
+   PHONE — KEEP THE VERSION THAT ALREADY LOOKS GOOD
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .feature,
+  .feature.reverse {
+    width: 100% !important;
+
+    grid-template-columns: 1fr !important;
+
+    gap: 35px !important;
+
+    min-height: auto !important;
+
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+
+  .feature .feature-copy,
+  .feature.reverse .feature-copy {
+    order: 1 !important;
+  }
+
+
+  .feature .feature-ui,
+  .feature.reverse .feature-ui {
+    order: 2 !important;
+  }
+
+
+  .checklist-ui,
+  .mistake-ui {
+    max-width: 100% !important;
+
+    transform: none !important;
+  }
+
 }
 
 </style>
